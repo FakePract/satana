@@ -1,0 +1,25 @@
+import math
+def fun(x):
+ return math.cos(x)-x*math.exp(x)
+a=int(input("Enter a value of a:"))
+b=int(input("Enter a value of b:"))
+n=int(input("enter no of iterations:"))
+fa=fun(a)
+print("function of a ="
+,fa)
+fb=fun(b)
+print("function of b="
+,fb)
+if fa*fb<0:
+ print("root lies in interval")
+ for i in range(1,n+1):
+ c=(a+b)/2
+ fc=fun(c)
+ if fa*fc<0:
+ b=c
+ else:
+ a=c
+ print("final root is ",c)
+else:
+ print("final roots does not lie in interval")
+print("end")
