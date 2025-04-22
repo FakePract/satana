@@ -1,0 +1,21 @@
+import math
+print ("Intermediate value theorem")
+def func(x):
+    return math.cos(x)-1.3*x
+a = int(input("Enter the value of a: "))
+b = int(input("Enter the value of b: "))
+fa=func(a)
+fb=func(b)
+print("a=", a, "b=",b, "fa=",fa, "fb=",fb)
+if (fa*fb<0):
+    print("Root lies in the interval")
+else:
+    print("Root does not lie in the interval")
+print("End")
+output:
+Intermediate value theorem
+Enter the value of a: 0
+Enter the value of b: 1
+a= 0 b= 1 fa= 1.0 fb= -0.7596976941318603
+Root lies in the interval
+End
