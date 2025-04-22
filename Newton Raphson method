@@ -1,0 +1,17 @@
+print("Program for newton Raphson method")
+import math
+def func(x):
+    return math.cos(x)-x*math.exp(x)
+def fd(x):
+    return -math.sin(x)-(x*math.exp(x)+math.exp(x))
+x0=float(input("Enter the value of x0: "))
+n=int(input("Enter the number of iteration: "))
+for i in range(1, n+1):
+    print("Enter the number of iteration",i)
+    fx=func(x0)
+    fdx=fd(x0)
+    x1=x0-(fx/fdx)
+    print("x0= ",x0, "f(x0)= ", fx, "fd(x0)= ", fd(x0), "x1= ", x1)
+    x0=x1
+    print("The root of the equation is", x1)
+print("End")
